@@ -109,7 +109,7 @@ export default class Html5Uploader extends Component {
 
     getUploadOptions = props => ({
         action: props.action,
-        name: props.name,
+        name: props.fileKeyName || props.name,
         timeout: props.timeout,
         method: props.method,
         beforeUpload: props.beforeUpload,

@@ -61,11 +61,12 @@ Upload.Core = class Core extends React.Component {
             headers,
             data,
             onSuccess,
+            fileKeyName,
         } = this.props;
 
         this.uploader = new Uploader({
             action,
-            name,
+            name: fileKeyName || name,
             method,
             beforeUpload,
             onProgress,
